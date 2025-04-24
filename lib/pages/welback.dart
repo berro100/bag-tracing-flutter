@@ -4,7 +4,7 @@ import 'package:bag_tracking/pages/appleLogin.dart';
 import 'package:bag_tracking/pages/facebookLogin.dart';
 import 'package:bag_tracking/pages/forgetpassw.dart';
 import 'package:bag_tracking/pages/googleLogin.dart';
-import 'package:bag_tracking/pages/home.dart';
+import 'package:bag_tracking/pages/homepage.dart';
 import 'package:bag_tracking/pages/singup.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -130,7 +130,7 @@ class _WelbackState extends State<Welback> {
                   if (_formKey.currentState!.validate()) {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => Home()),
+                      MaterialPageRoute(builder: (context) => Homepage()),
                     );
                   }
                 },

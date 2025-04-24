@@ -1,6 +1,6 @@
 // ignore_for_file: depend_on_referenced_packages, library_private_types_in_public_api, deprecated_member_use
 
-import 'package:bag_tracking/pages/home.dart';
+import 'package:bag_tracking/pages/homepage.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
@@ -54,9 +54,13 @@ class _CreateAccountScreenState extends State<Singup> {
             children: [
               SizedBox(height: 40),
               Text("Create Account", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
-              Text("Let’s create your account to become a member with us", style: TextStyle(fontSize: 14, color: Colors.grey)),
+              Text("Let's create your account to become a member with us", style: TextStyle(fontSize: 14, color: Colors.grey)),
               SizedBox(height: 20),
-              Icon(Icons.lock, size: 80, color: Colors.black),
+              Image.asset(
+                'assets/imgs/img11.png', // Updated image path
+                width: 100,
+                height: 100,
+              ),
               SizedBox(height: 20),
 
               _buildTextField("Bag ID", bagIdController,
@@ -142,7 +146,7 @@ class _CreateAccountScreenState extends State<Singup> {
                     if (_formKey.currentState!.validate()) {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Home()),
+                        MaterialPageRoute(builder: (context) => Homepage()),
                       );
                     }
                   },
@@ -164,7 +168,7 @@ class _CreateAccountScreenState extends State<Singup> {
     TextInputType keyboardType = TextInputType.text,
     List<TextInputFormatter>? inputFormatters,
     Widget? suffixIcon,
-    bool isRequired = false, // جعل الحقل إجباريًا أو لا
+    bool isRequired = false,
   }) {
     return Padding(
       padding: EdgeInsets.only(bottom: 12),

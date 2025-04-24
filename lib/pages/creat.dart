@@ -1,3 +1,4 @@
+// ignore: file_names
 import 'package:bag_tracking/pages/congratulations.dart';
 import 'package:bag_tracking/pages/singup.dart';
 import 'package:bag_tracking/pages/welback.dart';
@@ -11,7 +12,7 @@ class Creat extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20),
+          padding: EdgeInsets.symmetric(horizontal: 15),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -20,8 +21,8 @@ class Creat extends StatelessWidget {
                 'assets/imgs/img1.png',
 
                 // استبدل بمسار صورتك
-                width: 150,
-                height: 150,
+                width: 250,
+                height: 250,
               ),
               SizedBox(height: 20),
 
